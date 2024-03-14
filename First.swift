@@ -131,26 +131,165 @@ print ("hello world")
 
 
 
-class Food {
-    var eat: String
+// class Food {
+//     var eat: String
 
-    init(eat: String) {
-        se.eat = "beans"
+//     init(eat: String) {
+//         se.eat = "beans"
+//     }
+// }
+
+// var food1 = Food()
+// var food2 =  food1
+// food2.eat = "rice"
+
+// print (food1.eat)
+// print (food2.eat)
+
+
+
+
+// func square(number:int) -> int {
+//     number * number
+// }
+
+// var unWrappedNumber : int? = nil
+
+
+// struct Book {
+//     let title: String
+//     let author: String?
+// }
+
+// let book = Book(title: "Beowulf", author: nil)
+// let author = book.author ?? "Anonymous"
+// print (author) 
+
+// enum userError: Error {
+//     case badID, networkFailed 
+// }
+
+// func getUser(id: Int)throws -> String {
+//     throw userError.networkFailed
+// }
+
+// if let user = try?getUser(id:23) {
+//     print ("User: \(user)")
+// }
+
+// let user = (try?getUser(id:23)) ?? "Anonymous"
+// print(user)
+
+
+// func number(id: int) -> int {
+    
+// }
+
+
+// var name = "Josephine"
+// var age = 26
+// var message = "i'm \(name) and i am \(age) years old "
+// print(message)
+
+
+// var colors = ["Red, "pink", "Blue]
+// var numbers = [4,8,5,7]
+// var readings = [0.1, 0.5, 0.8]
+
+
+// print (colors[0])
+
+// let employee = [
+//     "name" : "taylor",
+//     "job": "Singer",
+// ]
+
+// print (employee["name", default: "unknown"])
+
+// var numbers = Set([1,2,3,4,5])
+// numbers.insert(11)
+// numbers.contain(12)
+// print(numbers)
+
+// enum weekday {
+//     case monday, tuesday, friday
+// }
+
+// var day = weekday.monday
+// day.friday
+// print(day)
+
+
+// ternary operator
+// let age = 10 
+// let canVote = age >= 20 ? "yes" : "no"
+// print (canVote)
+
+// for i in 1...12{
+//     print("5 x \(i) is \(5 * i)")
+// }
+
+
+// var lyric = "Haters gonna"
+
+// for _ in 1...5 {
+//     lyric += " hate"
+// }
+
+// print (lyric)
+
+
+// var count = 10
+
+// while count > 0 {
+//     print("\(count)...")
+//     count += 1
+// }
+
+// print("Go!")
+
+
+// func timeTable(number: Int)  {
+//     for i in 1...12 {
+//         print ("\(i) x \(number) is \(i * number)")
+//     }
+// }
+
+// timeTable(number: 10)
+
+// func rollDice() -> Int {
+//     return int.random(in: 1...6)
+// }
+
+// let result  = rollDice()
+// print(result)
+
+
+enum passwordError: Error {
+    case short, obvious 
+}
+
+func checkPassword(_ password: string)throws -> String {
+    if password.count < 5 {
+        throw passwordError.short
+    }
+
+    if password == "12345"{
+        throw passwordError.obvious
+    }
+
+    if password.count < 10 {
+        return "OK "
+    } else {
+        return "Good"
     }
 }
 
-var food1 = Food()
-var food2 =  food1
-food2.eat = "rice"
-
-print (food1.eat)
-print (food2.eat)
-
-
-
-
-func square(number:int) -> int {
-    number * number
+do {
+    let result = try checkPassword("12345")
+    print("Rating: `(result)")
+} catch passwordError.obvious {
+    print("i have my luggage")
+} catch {
+    print ("there was an error")
 }
-
-var unWrappedNumber : int? = nil
