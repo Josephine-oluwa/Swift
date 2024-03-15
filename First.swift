@@ -265,31 +265,40 @@ print ("hello world")
 // print(result)
 
 
-enum passwordError: Error {
-    case short, obvious 
+// enum passwordError: Error {
+//     case short, obvious 
+// }
+
+// func checkPassword(_ password: string)throws -> String {
+//     if password.count < 5 {
+//         throw passwordError.short
+//     }
+
+//     if password == "12345"{
+//         throw passwordError.obvious
+//     }
+
+//     if password.count < 10 {
+//         return "OK "
+//     } else {
+//         return "Good"
+//     }
+// }
+
+// do {
+//     let result = try checkPassword("12345")
+//     print("Rating: `(result)")
+// } catch passwordError.obvious {
+//     print("i have my luggage")
+// } catch {
+//     print ("there was an error")
+// }
+
+
+func printTables(for number: Int){
+    for i in 1...12{
+        print ("\(i) x \(number)  is \(i * number)")
+    }
 }
 
-func checkPassword(_ password: string)throws -> String {
-    if password.count < 5 {
-        throw passwordError.short
-    }
-
-    if password == "12345"{
-        throw passwordError.obvious
-    }
-
-    if password.count < 10 {
-        return "OK "
-    } else {
-        return "Good"
-    }
-}
-
-do {
-    let result = try checkPassword("12345")
-    print("Rating: `(result)")
-} catch passwordError.obvious {
-    print("i have my luggage")
-} catch {
-    print ("there was an error")
-}
+printTables(for:Int )
