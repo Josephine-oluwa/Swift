@@ -295,10 +295,63 @@ print ("hello world")
 // }
 
 
-func printTables(for number: Int){
-    for i in 1...12{
-        print ("\(i) x \(number)  is \(i * number)")
+// func printTables(for number: Int){
+//     for i in 1...12{
+//         print ("\(i) x \(number)  is \(i * number)")
+//     }
+// }
+
+// printTables(for:Int )
+
+// print(printTables)
+
+
+// func greet(_ person: String, formal: Bool = false) {
+//     if formal {
+//         print("welcome, \(person)")
+//     } else {
+//         print ("Hi, \(person)")
+//     }
+// }
+
+// greet ("Tim")
+// greet ("Taylor")
+
+
+// let team = ["Gloria", "Toy", "Sand", "Tea"]
+
+// let onlyT = team.filter{$0.hasPrefix("T")}
+// print(onlyT)
+
+
+// struct Album {
+//     let title: String
+//     let artist: String
+//     var isReleased = true
+
+//     func printSummary() {
+//         print("\(title) by \(artist)")
+//     }
+// }
+
+// let red = Album(title: "Red", artist: "Taylor swift")
+// print(red.title)
+// red.printSummary()
+
+// struct BankAccount {
+//     var funds = 0 
+
+//     mutating func deposit(amount: int) {
+//         funds +=amount
+//     }
+//     mutating func withdraw()
+// }
+
+class Site {
+    let id: Int
+
+    init(id: Int) {
+        self.id = id
+    print 
     }
 }
-
-printTables(for:Int )
